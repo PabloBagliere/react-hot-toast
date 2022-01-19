@@ -1,0 +1,12 @@
+{
+  "name": "react-hot-toast-component",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/component",
+  "exports": "./dist/index.mjs",
+  "peerDependencies": {
+    "react-hot-toast": "*",
+    "react": "*"
+  }
+}
