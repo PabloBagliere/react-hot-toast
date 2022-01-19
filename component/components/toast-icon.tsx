@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled, keyframes } from 'goober';
 
-import { Toast } from 'react-hot-toast-bunchee';
+import { Toast } from 'react-hot-toast';
 import { ErrorIcon, ErrorTheme } from './error';
 import { LoaderIcon, LoaderTheme } from './loader';
 import { CheckmarkIcon, CheckmarkTheme } from './checkmark';

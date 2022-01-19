@@ -1,10 +1,11 @@
 {
-  "name": "react-hot-toast-bunchee",
+  "name": "react-hot-toast",
   "description": "Smoking hot React Notifications. Lightweight, customizable and beautiful by default.",
-  "version": "1.0.0",
-  "author": "Pablo bagliere",
+  "version": "2.2.0",
+  "author": "Timo Lins",
   "license": "MIT",
   "sideEffects": false,
+  "repository": "timolins/react-hot-toast",
   "keywords": [
     "react",
     "notifications",
@@ -92,7 +93,7 @@
     "bunchee": "^1.8.2",
     "csstype": "^3.0.7",
     "npm-run-all": "^4.1.5",
-    "react-hot-toast-bunchee": "link:./",
+    "react-hot-toast": "link:./",
     "rimraf": "^3.0.2",
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",

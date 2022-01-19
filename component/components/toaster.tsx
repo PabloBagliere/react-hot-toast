@@ -1,6 +1,6 @@
 import { css, setup } from 'goober';
 import * as React from 'react';
-import { resolveValue, ToasterProps, ToastPosition, useToaster} from 'react-hot-toast-bunchee';
+import { resolveValue, ToasterProps, ToastPosition, useToaster} from 'react-hot-toast';
 import { createRectRef, prefersReducedMotion } from '../../src/core/utils'
 import { ToastBar } from './toast-bar';
 

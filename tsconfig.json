@@ -33,8 +33,8 @@
     "target": "es5",
     "baseUrl": ".",
     "paths": {
-      "react-hot-toast-bunchee": ["./src/index.ts"],
-      "react-hot-toast-bunchee/component": ["./component/index.ts"],
+      "react-hot-toast": ["./src/index.ts"],
+      "react-hot-toast/component": ["./component/index.ts"],
     },
     "typeRoots": ["./src/core/types", "./node_modules/@types"]
   },

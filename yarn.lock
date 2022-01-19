@@ -6834,7 +6834,7 @@ randomfill@^1.0.3:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
 
-"react-hot-toast-bunchee@link:.":
+"react-hot-toast@link:.":
   version "0.0.0"
   uid ""
 
