@@ -14,20 +14,40 @@
   ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./component": {
+      "import": "./component/dist/index.mjs",
+      "module": "./component/dist/index.esm.js",
+      "require": "./component/dist/index.js",
+      "types": "./component/dist/component/index.d.ts"
+    }
+  },
+  "react-native": "./dist/index.esm.js",
   "files": [
     "dist",
-    "src",
-    "types"
+    "types",
+    "component/dist/**",
+    "component/package.json"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "yarn build:core && yarn build:component",
+    "build:component": "bunchee index.ts --cwd component -m --no-sourcemap",
+    "build:core": "bunchee ./src/index.ts -m --no-sourcemap",
+    "clean": "rimraf dist component/dist",
+    "prepublishOnly": "yarn clean && yarn build",
     "lint": "tsdx lint",
     "test": "echo \"No test specified\"",
-    "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
@@ -47,14 +67,21 @@
     "arrowParens": "always",
     "trailingComma": "es5"
   },
-  "module": "dist/react-hot-toast.esm.js",
   "size-limit": [
     {
-      "path": "dist/react-hot-toast.cjs.production.min.js",
+      "path": "dist/index.js",
       "limit": "5 KB"
     },
     {
-      "path": "dist/react-hot-toast.esm.js",
+      "path": "component/dist/index.js",
+      "limit": "5 KB"
+    },
+    {
+      "path": "dist/index.esm.js",
+      "limit": "5 KB"
+    },
+    {
+      "path": "component/dist/index.esm.js",
       "limit": "5 KB"
     }
   ],
@@ -62,9 +89,13 @@
     "@size-limit/preset-small-lib": "^4.9.1",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "bunchee": "^1.8.2",
     "csstype": "^3.0.7",
+    "rimraf": "^3.0.2",
     "size-limit": "^4.9.1",
-    "tsdx": "^0.14.1"
+    "tsdx": "^0.14.1",
+    "typescript": "^3.9.10",
+    "react-hot-toast": "link:./"
   },
   "dependencies": {
     "goober": "^2.1.1"
