@@ -1,5 +1,5 @@
 {
-  "name": "react-hot-toast-bungee",
+  "name": "react-hot-toast-bunchee",
   "description": "Smoking hot React Notifications. Lightweight, customizable and beautiful by default.",
   "version": "1.0.0",
   "author": "Pablo bagliere",
@@ -39,13 +39,17 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "start": "npm-run-all -p watch:core watch:component",
     "build": "yarn build:core && yarn build:component",
     "build:component": "bunchee index.ts --cwd component -m --no-sourcemap",
     "build:core": "bunchee ./src/index.ts -m --no-sourcemap",
+    "build:core:notMiniffay": "bunchee ./src/index.ts --no-sourcemap",
+    "build:component:notMiniffay": "bunchee index.ts --cwd component --no-sourcemap",
     "clean": "rimraf dist component/dist",
     "prepublishOnly": "yarn clean && yarn build",
     "prepare": "yarn build",
+    "watch:core": "yarn build:core:notMiniffay -w",
+    "watch:component": "yarn build:component:notMiniffay -w",
     "lint": "tsdx lint",
     "test": "echo \"No test specified\"",
     "size": "size-limit",
@@ -86,11 +90,12 @@
     "@types/react-dom": "^17.0.0",
     "bunchee": "^1.8.2",
     "csstype": "^3.0.7",
+    "npm-run-all": "^4.1.5",
+    "react-hot-toast-bunchee": "link:./",
     "rimraf": "^3.0.2",
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
-    "typescript": "^3.9.10",
-    "react-hot-toast-bunchee": "link:./"
+    "typescript": "^3.9.10"
   },
   "dependencies": {
     "goober": "^2.1.1"
