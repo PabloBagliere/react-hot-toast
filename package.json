@@ -1,11 +1,10 @@
 {
-  "name": "react-hot-toast",
+  "name": "react-hot-toast-bungee",
   "description": "Smoking hot React Notifications. Lightweight, customizable and beautiful by default.",
-  "version": "2.2.0",
-  "author": "Timo Lins",
+  "version": "1.0.0",
+  "author": "Pablo bagliere",
   "license": "MIT",
   "sideEffects": false,
-  "repository": "timolins/react-hot-toast",
   "keywords": [
     "react",
     "notifications",
@@ -46,6 +45,7 @@
     "build:core": "bunchee ./src/index.ts -m --no-sourcemap",
     "clean": "rimraf dist component/dist",
     "prepublishOnly": "yarn clean && yarn build",
+    "prepare": "yarn build",
     "lint": "tsdx lint",
     "test": "echo \"No test specified\"",
     "size": "size-limit",
@@ -54,11 +54,6 @@
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
   },
   "prettier": {
     "printWidth": 80,
@@ -95,7 +90,7 @@
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
     "typescript": "^3.9.10",
-    "react-hot-toast": "link:./"
+    "react-hot-toast-bunchee": "link:./"
   },
   "dependencies": {
     "goober": "^2.1.1"

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled, keyframes } from 'goober';
 
-import { Toast, ToastPosition, resolveValue, Renderable } from 'react-hot-toast';
+import { Toast, ToastPosition, resolveValue, Renderable } from 'react-hot-toast-bunchee';
 import { prefersReducedMotion } from '../../src/core/utils'
 import { ToastIcon } from './toast-icon';
 
