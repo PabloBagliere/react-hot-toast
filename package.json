@@ -1,5 +1,5 @@
 {
-  "name": "react-hot-toast-bunchee",
+  "name": "react-hot-toast-native-web",
   "description": "Smoking hot React Notifications. Lightweight, customizable and beautiful by default.",
   "version": "1.0.0",
   "author": "Pablo bagliere",
@@ -92,7 +92,7 @@
     "bunchee": "^1.8.2",
     "csstype": "^3.0.7",
     "npm-run-all": "^4.1.5",
-    "react-hot-toast-bunchee": "link:./",
+    "react-hot-toast-native-web": "link:./",
     "rimraf": "^3.0.2",
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
