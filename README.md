@@ -39,13 +39,13 @@
 #### With yarn
 
 ```sh
-yarn add react-hot-toast
+yarn add react-hot-toast-native-web
 ```
 
 #### With NPM
 
 ```sh
-npm install react-hot-toast
+npm install react-hot-toast-native-web
 ```
 
 ## Getting Started
@@ -53,7 +53,8 @@ npm install react-hot-toast
 Add the Toaster to your app first. It will take care of rendering all notifications emitted. Now you can trigger `toast()` from anywhere!
 
 ```jsx
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast-native-web';
+import { Toaster } from 'react-hot-toast-native-web/component';
 
 const notify = () => toast('Here is your toast.');
 
